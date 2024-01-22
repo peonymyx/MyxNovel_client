@@ -30,4 +30,4 @@ jobs:
           npm ci
           npm run build
           sudo swapoff -a; sudo swapon -a
-          curl -X POST -H "Content-Type: application/json" -H "Authorization: ${{ secrets.DC_KEY }}" -d '{"content":"Dự án node js đã deploy thành công link: https://novel.myx.info.vn "}' ${{ secrets.DC_URL }} 
+          curl -X POST -H "Content-Type: application/json" -H "Authorization: ${{ secrets.DC_KEY }}" -d '{"content":"Dự án React đã deploy thành công link: https://novel.myx.info.vn "}' ${{ secrets.DC_URL }} 
