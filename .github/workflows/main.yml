@@ -28,7 +28,8 @@ jobs:
           git status
           . $HOME/.nvm/nvm.sh
           nvm use
-          npm i
+          npm ci
           npm run build
+          echo "swapoff and on"
           sudo swapoff -a; sudo swapon -a
           curl -X POST -H "Content-Type: application/json" -H "Authorization: ${{ secrets.DC_KEY }}" -d '{"content":"Dự án node js đã deploy thành công link: https://novel.myx.info.vn "}' ${{ secrets.DC_URL }} 
