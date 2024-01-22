@@ -23,7 +23,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: 22
         script: |
-          cd /var/www/client
+          cd /var/www/client/MyxNovel_client
           git pull
           git status
           . $HOME/.nvm/nvm.sh
@@ -31,4 +31,4 @@ jobs:
           npm ci
           npm run build
           sudo swapoff -a; sudo swapon -a
-          curl -X POST -H "Content-Type: application/json" -H "Authorization: ${{ secrets.DC_KEY }}" -d '{"content":"Dự án node js đã deploy thành công link: ${{ secrets.SV_HOST }} "}' ${{ secrets.DC_URL }} 
+          curl -X POST -H "Content-Type: application/json" -H "Authorization: ${{ secrets.DC_KEY }}" -d '{"content":"Dự án node js đã deploy thành công link: https://novel.myx.info.vn "}' ${{ secrets.DC_URL }} 
