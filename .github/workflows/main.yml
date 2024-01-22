@@ -27,6 +27,7 @@ jobs:
           git pull
           git status
           . $HOME/.nvm/nvm.sh
+          nvm use
           npm ci
           npm run build
           sudo swapoff -a; sudo swapon -a
